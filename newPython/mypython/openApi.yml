@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Sample API
+  description: A sample API to illustrate OpenAPI concepts
+paths:
+  /tryOpenApi:
+    get:
+      operationId: sample.printAll
+      tags:
+        - MetaboLights-OpenAPI
+      description: Return a contact welcome message
+      responses:
+        '200':
+          description: Successful response
+  /serchStudy:
+    get:
+      operationId: db_connection.get_public_studies
+      tags:
+        - MetaboLights-OpenAPI
+      description: Return a contact welcome message
+      responses:
+        '200':
+          description: Successful response
+  /getMessage:
+    get:
+      operationId: sample.testAll
+      tags:
+        - MetaboLights-OpenAPI
+      description: Returns a welcome message with user input
+      parameters:
+        - name: name
+          in: query
+          required: true
+          description: name of the user
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
