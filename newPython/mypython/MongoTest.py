@@ -10,7 +10,7 @@ for item in collection:
     print(item)
 
 pprint(db.categories.find())
-
+#update git repo for testing purpose
 for db in client.list_databases():
     print(db)
 
